@@ -1,7 +1,7 @@
 {
   "name": "lbpl",
   "version": "1.0.0",
-  "description": "",
+  "description": "Logic Based Programming Language",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {

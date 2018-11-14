@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import transverse from "./logic/transverse";
+import traverse from "./logic/traverse";
 import Not from "./logic/gates/Not";
 import Battery from "./logic/nodes/Battery";
 
@@ -10,8 +10,13 @@ import "./styles.css";
 let bat = new Battery();
 let not = new Not();
 bat.connections[0] = not;
-transverse(bat);
-console.log(not);
+not.connections[0] = not;
+setInterval(() => {
+  traverse(not);
+  traverse(bat);
+  console.log(not);
+}, 1000);
+// traverse(not);
 
 function App() {
   return (

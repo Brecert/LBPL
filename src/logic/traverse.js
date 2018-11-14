@@ -1,5 +1,5 @@
 // Crawl the AST structure and update/execute them.
-export default function transverse(node: Node) {
+export default function traverse(node: Node) {
   console.log(node);
   node.updateConnection();
   node.updateOutput();
@@ -7,7 +7,7 @@ export default function transverse(node: Node) {
     if (connection === node) {
       break;
     } else {
-      transverse(connection);
+      traverse(connection);
     }
   }
 }
